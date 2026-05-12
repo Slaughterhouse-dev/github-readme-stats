@@ -65,9 +65,9 @@ function calculateRank({
     STARS_WEIGHT +
     FOLLOWERS_WEIGHT;
 
-  const THRESHOLDS = [1, 25, 45, 60, 72, 82, 90, 95, 100];
+  const THRESHOLDS = [1, 85, 92, 96, 98, 99, 99.5, 99.8, 100];
   const LEVELS = ["S", "A+", "A", "A-", "B+", "B", "B-", "C+", "C"];
-
+  
   const rank =
     1 -
     (COMMITS_WEIGHT * exponential_cdf(commits / COMMITS_MEDIAN) +
